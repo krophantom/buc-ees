@@ -29,8 +29,8 @@
                     <label for="category">Category:</label>
                     <select name="category" id="category" class="form-control">
 
+                        <option value="0">Select Category</option>
                         {% for vendor in vendors %}
-                            <option value="0">Select Category</option>
                             <option value="{{ vendor.id }}">{{ vendor.category }}</option>
                         {% endfor %}
 

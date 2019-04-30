@@ -8,7 +8,7 @@ $(document).ready(function () {
         let currentElement = event.currentTarget;
         let vendorId = currentElement.value;
 
-        if(vendorId != 0) {
+        if (vendorId != 0) {
             console.log(vendorId);
             fetch(`/vendors/${vendorId}`)
                 .then(response => {
@@ -17,7 +17,6 @@ $(document).ready(function () {
                 .then(json => {
                     showVendor(json);
                 })
-
         }
 
         vendorAddress.innerHTML = '';
@@ -36,9 +35,9 @@ $(document).ready(function () {
                     <strong>Attn: Buyer for ${vendor.category}</strong><br>
 
                     ${vendor.addr_line_1}<br>
-                    ${vendor.addr_line_2}<br>
+                    ${vendor.addr_line_2 ? vendor.addr_line_2 + '<br >' : ''}
                     ${vendor.addr_city_state_zip}
-                 </address>`;
+                </address>`;
 
             vendorAddress.innerHTML = vendorAddressHtml;
         } else {
