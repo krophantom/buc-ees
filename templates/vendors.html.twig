@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    <div class="row py-3">
+        <div class="col col-md-8">
+
+            <h1>Vendor Information</h1>
+
+            <p>Buc-ee's is always looking for unique products or items we can offer our customers.</p>
+
+            <p>Please allow Buc-ee's to consider your products by providing the following:</p>
+
+            <ul>
+                <li>Product sample(s) - <strong>Please DO NOT send samples that need to be returned.</strong></li>
+                <li>Product cost</li>
+                <li>Suggested retail</li>
+                <li>Complete contact information – name, mailing address, phone and email</li>
+            </ul>
+
+            <strong>Once we receive your samples, your products will be evaluated. If your products are a fit, we will
+                contact you for additional information.</strong>
+
+            <p><strong>Your must ship your samples to the correct buyer.</strong>Choose a category from this list to
+                determine the address where you should ship your samples:</p>
+
+            <form action="/vendors" method="GET">
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select name="category" id="category" class="form-control">
+
+                        {% for vendor in vendors %}
+                            <option value="0">Select Category</option>
+                            <option value="{{ vendor.id }}">{{ vendor.category }}</option>
+                        {% endfor %}
+
+                    </select>
+                </div>
+            </form>
+
+            <div id="vendor"></div>
+
+
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ encore_entry_script_tags('vendor') }}
+{% endblock %}

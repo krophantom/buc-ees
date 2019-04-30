@@ -1,0 +1,40 @@
+$theme-colors: (
+        "primary": #d41142,
+        "secondary": #fbf3de
+);
+
+$card-bg: theme-color("primary");
+
+$navbar-light-color: white;
+
+$input-focus-border-color: #66afe9;
+$input-focus-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+@import 'hilite';
+
+body {
+  background-image: url('../images/wood.jpg');
+}
+
+label {
+  font-weight: 700;
+}
+
+.bg-black {
+  background-color: black;
+  color: white;
+}
+
+.phi-1 {
+  font-size: 1em;
+}
+
+.phi-2 {
+  font-size: 1.6em;
+}
+
+.phi-3 {
+  font-size: 2.6em;
+}

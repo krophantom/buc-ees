@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    <div class="row py-3">
+        <div class="col col-md-8">
+
+            <h1>Contact Buc-ee's</h1>
+
+            <p><strong>Please read our <a href="">Frequently Asked Questions</a> before you contact Buc-ee's with a
+                    question.</strong></p>
+
+            <p><strong>Your question is probably answered there.</strong></p>
+
+            <p> Page views since 8/8/2012: x,xxxx,xxxx</p>
+
+            <p>Please enter the required contact information:</p>
+
+            {{ include('forms/_contact.html.twig',{'form':form}) }}
+
+        </div>
+    </div>
+
+    {{ encore_entry_script_tags('contact') }}
+
+{% endblock %}

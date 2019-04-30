@@ -1,0 +1,230 @@
+{% extends '/base.html.twig' %}
+
+{% block title %}FAQs{% endblock %}
+
+{% block content %}
+
+    <div class="row py-3">
+        <section class="col col-md-8">
+
+            <h1>Frequently Asked Questions</h1>
+            <h2>Choose a category</h2>
+
+            {% embed '_faq.html.twig' with {'id':'sales'} %}
+                {% block faqtitle %}Mail Order / Online Sales{% endblock %}
+                {% block faqcontent %}
+                    <p>Q: Can I purchase Buc-ee’s items on the Internet?</p>
+
+                    <p>A: <em>Currently, we do not have an online store or a mail order system.</em></p>
+
+                {% endblock %}
+            {% endembed %}
+
+            {% embed '_faq.html.twig' with {'id':'storeHours'} %}
+                {% block faqtitle %}Store Hours{% endblock %}
+                {% block faqcontent %}
+
+
+                    <p>Q: What are your store hours?</p>
+
+                    <p>A: <em>All Buc-ee’s are open 24 hours a day, 365 days a year.</em></p>
+
+                {% endblock %}
+            {% endembed %}
+
+            {% embed '_faq.html.twig' with {'id':'carwashHours'} %}
+                {% block faqtitle %}Car Wash Hours{% endblock %}
+                {% block faqcontent %}
+
+
+                    <p>Q: What are your car wash hours?</p>
+
+                    <p>A: <em>Car washes are open daily 7am to 8pm, weather permitting.</em></p>
+
+                {% endblock %}
+            {% endembed %}
+
+
+            {% embed '_faq.html.twig' with {'id':'fuel'} %}
+                {% block faqtitle %}Ethanol Free Gas or DEF at the pump{% endblock %}
+                {% block faqcontent %}
+                    <p>Q: Does Buc-ee's have Ethanol Free Gas or DEF at the pump?</p>
+
+                    <p>A: <em>These locations have Ethanol Free Gas or DEF at the pump:</em></p>
+                {% endblock %}
+            {% endembed %}
+
+
+            {% embed '_faq.html.twig' with {'id':'returns'} %}
+                {% block faqtitle %}Merchandise Returns {% endblock %}
+                {% block faqcontent %}
+
+
+                    <p>Q: How can I return an item?</p>
+
+                    <p>A: <em>Please return the unused item to the store from which it was purchased and ask to
+                            speak to one of the managers.</em></p>
+
+                {% endblock %}
+            {% endembed %}
+
+
+            {% embed '_faq.html.twig' with {'id':'holds'} %}
+                {% block faqtitle %}Credit / Debit Holds {% endblock %}
+                {% block faqcontent %}
+
+
+                    <p>Q: Why is there a hold on my Debit or Credit card?</p>
+
+                    <p>A: <em>Wikipedia actually has a pretty good article on 'Authorization Holds'. It's a lot of
+                            information, so we’ll just provide a link: <a
+                                    href="http://en.wikipedia.org/wiki/Authorization_hold">Wikipedia article on
+                                Credit/Debit
+                                Holds</a></em></p>
+
+                {% endblock %}
+            {% endembed %}
+
+            {% embed '_faq.html.twig' with {'id':'phone'} %}
+                {% block faqtitle %}Store Phone Numbers{% endblock %}
+                {% block faqcontent %}
+
+
+                    <p>Q: Why are your store phone numbers unlisted?</p>
+
+                    <p>A: <em>This is not a decision we made lightly. We previously had phones in the stores which were
+                            answered by the cashiers. When cashiers were on the phone instead of waiting on
+                            customers, this made the customers angry, so we thought it would be better to direct
+                            comments and questions to the website. We have found this also helps us be more
+                            consistent and accurate in answering questions and addressing concerns.</em></p>
+
+                {% endblock %}
+            {% endembed %}
+
+            {% embed '_faq.html.twig' with {'id':'donations'} %}
+                {% block faqtitle %}Donations{% endblock %}
+                {% block faqcontent %}
+
+
+                    <p>Q: How can I request a donation to my charity/cause?</p>
+
+                    <p>A: <em>Guidelines for consideration can be found on our <a href="http://buc-ees.com/contributions">Contributions page</a>.</em></p>
+
+                {% endblock %}
+            {% endembed %}
+
+
+
+            {% embed '_faq.html.twig' with {'id':'vendors'} %}
+                {% block faqtitle %}New Vendors{% endblock %}
+                {% block faqcontent %}
+
+
+                    <p>Q: How can I become a vendor for Buc-ee’s, or have my merchandise sold at your stores?</p>
+
+                    <p>A: <em>Buc-ee's is always looking for unique products or items we can offer our customers. Please
+                            see guidelines for becoming a vendor on our <a href="http://buc-ees.com/vendors">New Vendor page</a>.</em></p>
+
+                {% endblock %}
+            {% endembed %}
+
+
+            {% embed '_faq.html.twig' with {'id':'franchise'} %}
+                {% block faqtitle %}Stock and Franchise Opportunities{% endblock %}
+                {% block faqcontent %}
+
+
+                    <p>Q: Is Buc-ee’s publicly traded?</p>
+
+                    <p>A: <em>Buc-ee’s is privately owned. We have no plans at this time of becoming publicly
+                            traded.</em></p>
+
+                    <p>Q: Does Buc-ee’s offer Franchise Opportunities?</p>
+
+                    <p>A: <em>Buc-ee’s does not offer franchises at this time.</em></p>
+
+                    <aside><em>As you may know, we don’t take shortcuts with regard to the quality of our facilities,
+                            products, or staff. Franchises and publicly traded companies must constantly focus on
+                            the money, and the side effect can be reduced standards in exchange for increased
+                            profits. Our intention is to maintain our independence as a private company so we can
+                            continue to focus on the customers instead of the bottom line.</em>
+                    </aside>
+
+                {% endblock %}
+            {% endembed %}
+
+
+            {% embed '_faq.html.twig' with {'id':'video'} %}
+                {% block faqtitle %}Store Video Request{% endblock %}
+                {% block faqcontent %}
+
+
+                    <p>Can I get a copy of the video of something that happened at one of the stores?</p>
+
+                    <p>A: <em>Yes, if a crime or extraordinary circumstance exists, you may choose to report it to
+                            the police department and if they take your case, they can request the video.</em></p>
+
+                {% endblock %}
+            {% endembed %}
+
+
+            {% embed '_faq.html.twig' with {'id':'giftCards'} %}
+                {% block faqtitle %}Gift Cards{% endblock %}
+                {% block faqcontent %}
+
+
+                    <p>Q: Does Buc-ee’s Have Gift Cards?</p>
+
+                    <p>A: <em>Not at this time. The reason is we have not been able to find a gift card that will work
+                            across all stores. The problem is we use 5 different operating systems. We will continue
+                            to work to find a solution to this problem.</em></p>
+
+                {% endblock %}
+            {% endembed %}
+
+
+            {% embed '_faq.html.twig' with {'id':'creditCards'} %}
+                {% block faqtitle %}Buc-ee's Credit Cards{% endblock %}
+                {% block faqcontent %}
+
+
+                    <p>Q: Does Buc-ee’s offer a personal credit card?</p>
+
+                    <p>A: <em>We have a partnership with TDECU to provide TDECU credit card customers a 00.10 cent per
+                            gallon discount on credit card fuel purchases. Click this link to apply for your credit
+                            card today!</em></p>
+
+                {% endblock %}
+            {% endembed %}
+
+
+            {% embed '_faq.html.twig' with {'id':'employment'} %}
+                {% block faqtitle %}Employment{% endblock %}
+                {% block faqcontent %}
+
+
+                    <p>Q: How do I learn more about employment opportunities at Buc-ee’s?</p>
+
+                    <p>A: <em>Buc-ee’s is always seeking talented individuals to join its unique team. Click here for
+                            more info.</em></p>
+
+                {% endblock %}
+            {% endembed %}
+
+            {% embed '_faq.html.twig' with {'id':'w2'} %}
+                {% block faqtitle %}How do I get my W-2?{% endblock %}
+                {% block faqcontent %}
+
+                    <p>Q: How do I get my W-2?</p>
+
+                    <p>A: <em>Use the Employee Self Service link here or at the bottom of the page. Employee Self
+                            Service</em></p>
+
+                {% endblock %}
+            {% endembed %}
+
+
+        </section>
+    </div>
+
+{% endblock %}

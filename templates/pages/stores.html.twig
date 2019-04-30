@@ -1,0 +1,25 @@
+{% extends '/base.html.twig' %}
+
+{% block title %}FAQs{% endblock %}
+
+{% block content %}
+
+    <div class="row py-3">
+        <section class="col col-md-8">
+
+            <article>
+                <h1>Map of Buc-ee's Stores</h1>
+            </article>
+            <h1>List of Buc-ee's Stores</h1>
+            <article>
+                {% for city, group in stores|group_by(=>_.city) %}
+                    <h2><img src="{{ asset('build/images/beaverbutton.gif') }}" alt="Buc-ee's Beaver Icon" class="beaver-icon"> {{ city }}</h2>
+                    {% for store in group %}
+                        {{ include('/_store.html.twig', {'store':store}) }}
+                    {% endfor %}
+                {% endfor %}
+            </article>
+        </section>
+    </div>
+
+{% endblock %}

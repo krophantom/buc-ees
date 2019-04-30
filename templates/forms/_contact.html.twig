@@ -1,0 +1,140 @@
+{{ form_start(form) }}
+
+{{ form_errors(form) }}
+
+<div class="form-group row">
+
+    <label for="{{ form.name.vars.id }}" class="col-md-2 col-form-label">Name*:</label>
+    <div class="col-md-10">
+        {{ form_widget(form.name) }}
+    </div>
+
+    {{ form_errors(form.name) }}
+    {{ form_help(form.name) }}
+
+</div>
+
+<div class="form-group row">
+
+    <label for="{{ form.email.vars.id }}" class="col-md-2 col-form-label">Email*:</label>
+    <div class="col-md-10">
+        {{ form_widget(form.email) }}
+    </div>
+
+    {{ form_errors(form.email) }}
+    {{ form_help(form.email) }}
+
+</div>
+
+<div class="form-group row">
+    <div class="col-md-10 offset-md-2">
+        <label for="{{ form.fuel.vars.id }}">Is this about Buc-ee’s locations with Ethanol Free Gas or DEF at
+            the pump?</label>
+        {{ form_widget(form.fuel, {'attr':{'disabled':'disabled'}}) }}
+
+    </div>
+</div>
+
+<div class="form-group row d-none">
+    <div class="col-md-10 offset-md-2">
+        <label for="{{ form.employee.vars.id }}">Are you a Buc-ee's employee?</label>
+        {{ form_widget(form.employee, {'attr':{'disabled':'disabled'}} ) }}
+
+    </div>
+</div>
+
+<div class="form-group row d-none">
+    <div class="col-md-10 offset-md-2">
+        <label for="{{ form.payment.vars.id }}">Is this about a debit or credit hold, refund, or disputed
+            transaction?</label>
+        {{ form_widget(form.payment, {'attr':{'disabled':'disabled'}}) }}
+
+    </div>
+</div>
+
+<div class="form-group row d-none">
+    <div class="col-md-10 offset-md-2">
+        <label for="{{ form.returns.vars.id }}">Is this about how to return an item or about a damaged
+            item?</label>
+        {{ form_widget(form.returns, {'attr':{'disabled':'disabled'}}) }}
+
+    </div>
+</div>
+
+<div class="form-group row d-none">
+    <div class="col-md-10 offset-md-2">
+        <label for="{{ form.lost.vars.id }}">Is this comment about a lost item?</label>
+        {{ form_widget(form.lost, {'attr':{'disabled':'disabled'}}) }}
+
+    </div>
+</div>
+
+<div class="form-group row d-none">
+
+    <div class="col-md-10 offset-md-2">
+        <p>
+            Please help us locate your lost item by including a detailed description of the item, including type, brand,
+            model, size and color. Also, please provide your mailing address. We will contact you by phone if we find
+            your item.
+        </p>
+    </div>
+    <label for="{{ form.phone.vars.id }}" class="col-md-2 col-form-label">Phone Number*:</label>
+    <div class="col-md-10">
+        {{ form_widget(form.phone, {'attr':{'disabled':'disabled'}}) }}
+    </div>
+
+    {{ form_errors(form.phone) }}
+    {{ form_help(form.phone) }}
+
+</div>
+
+<div class="form-group row d-none">
+    <div class="col-md-10 offset-md-2">
+        <label for="{{ form.store.vars.id }}">Please select the store</label>
+        {{ form_widget(form.store, {'attr':{'disabled':'disabled'}}) }}
+    </div>
+</div>
+
+<div class="form-group row d-none">
+    <div class="col-md-10 offset-md-2">
+        <label for="{{ form.application.vars.id }}">Is this comment about an application?</label>
+        {{ form_widget(form.application, {'attr':{'disabled':'disabled'}}) }}
+
+    </div>
+</div>
+
+<div class="form-group row d-none">
+    <div class="col-md-10 offset-md-2">
+        <label for="{{ form.completed.vars.id }}">Have you completed an application?</label>
+        {{ form_widget(form.completed, {'attr':{'disabled':'disabled'}}) }}
+    </div>
+</div>
+
+
+<div class="form-group row d-none">
+    <div class="col-md-10 offset-md-2">
+        <label for="{{ form.deer.vars.id }}">Is this about Deer Corn?</label>
+        {{ form_widget(form.deer, {'attr':{'disabled':'disabled'}}) }}
+    </div>
+</div>
+
+
+<div class="form-group row">
+
+    <div class="col-md-10 offset-md-2">
+        <label for="{{ form.text.vars.id }}">Please enter your comment here:</label>
+        {{ form_widget(form.text, {'attr':{'disabled':'disabled'}}) }}
+
+        {{ form_errors(form.text) }}
+        {{ form_help(form.text) }}
+    </div>
+</div>
+
+<div class="form-group row">
+    <div class="col-md-10 offset-md-2">
+        {{ form_widget(form.submit) }}
+    </div>
+</div>
+
+
+{{ form_end(form) }}

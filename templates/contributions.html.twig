@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    <div class="row py-3">
+        <div class="col col-md-8">
+
+
+            <h1>Contributions</h1>
+
+            <h2>Requests since 3-12-2012: <span>336,614</span></h2>
+            <p>Buc-ee's supports our community by contributing where the need is critical and the effect is long term
+                for
+                our customers and employees.</p>
+            <h2>Contribution Rules</h2>
+            <p>To apply for a contribution, you must represent an eligible 501(c)(3) organization based in a community
+                where
+                Buc-ee's operates. </p>
+            <h2>Timing</h2>
+            <p>Buc-ee's reviews contribution requests during the first week of each quarter. If your request is
+                approved,
+                you will be notified by telephone during the second week of the quarter. This is the only time that
+                contributions are reviewed and approved. The next review date is {{ nextreviewdate }}.</p>
+            <h2>Contribution Procedure</h2>
+            <ol>
+                <li>Fax a copy of your latest 501(c)(3) annual report and a copy of your form 990 to Buc-ee's at
+                    979-230-2921.
+                </li>
+                <li>Fill out and submit this form:</li>
+            </ol>
+
+           {{ include('forms/_contributions.html.twig', {'form':form}) }}
+
+        </div>
+
+    </div>
+
+{% endblock %}

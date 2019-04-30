@@ -1,0 +1,13 @@
+<article>
+    <h3>
+        <a data-toggle="collapse" href="#{{ id }}" role="button" aria-expanded="false"
+           aria-controls="collapseExample">
+            {% block faqtitle %}You forgot faqtitle.{% endblock %}
+        </a>
+    </h3>
+        <div class="card card-body collapse" id="{{ id }}">
+            {% block faqcontent %}
+                You forget faq content.
+            {% endblock %}
+        </div>
+</article>
